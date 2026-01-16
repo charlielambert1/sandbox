@@ -1,81 +1,130 @@
-temperature = 25
+#For Loop
 
-if temperature > 30:
-    print("It's a hot day")
-elif temperature < 20:
-    print("It's a cold day")
-else:
-    print("It's a lovely day")
+names = ["Alice", "Bob", "Charlie"]
 
-#-------------------------
-x=10
-y=5
-
-print(x == y)
-print(x != y)
-print(x > y)
-
-#------------------------
-
-age = 16
-print(f'age: {age}')
-
-has_id = True
-
-if age >= 18 and has_id:
-    print("You are allowed to enter")
-else:
-    print("You are not allowed to enter")
-
-is_student = True
-is_senior = False
-
-if is_student or is_senior:
-    print("You get a discount")
+for name in names:
+    print(name) 
 
 
-#------------------------
+#------------------
 
-is_logged_in = False
+for i in range(1,6):
+    print(i)
 
-if not is_logged_in:
-    print("Please log in to continue")
 
-#------------------------
+#------------------
 
-#check positive negative or zero
+count = 0 
 
-number = int(input("Enter a number: "))
+while count < 5:
+    print("Count is:", count)
+    count = count + 1
 
-if number > 0:
-    print("The number is positive")
-elif number < 0:
-    print("The number is negative")
-else:
-    print("The number is zero")
+#------------------
 
-#------------------------
-#simple grading system
+numbers = [10, 20, 30, 40, 50]
 
-score_str = input("Enter your score (0-100): ")
-score = int(score_str)
-if score >= 90:
-    print("Grade: A")
-elif score >= 80:
-    print("Grade: B")
-elif score >= 70:
-    print("Grade: C")
-else:
-    print("Grade: F")   
+x = 30
 
-#------------------------
-# #is the year a leap year
-# 
-year_str = input("Enter a year: ")
-year = int(year_str)
+for num in numbers:
+    print('checking', num)
+    if num == x:
+        print('Found', x)
+        break
+    print('Not found yet')
 
-if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-    print(f"{year} is a leap year")
-else:
-    print(f"{year} is not a leap year")
-#------------------------ 
+
+#------------------
+
+number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for num in number_list:
+    if num == 5:
+        continue
+    print(num)
+
+#------------------
+
+numbers_list = [10, 20, 30, 40, 50]
+
+for num in numbers_list:
+    print(num)
+
+#------------------
+
+string = "Hello, World!"
+
+for char in string:
+    if char == ',' or char == ' ' :
+        continue
+    print(char)
+
+#------------------
+
+for i in range(1, 11):
+    print(i)
+
+#------------------
+
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+for key in my_dict:
+    print(key)
+
+for key, value in my_dict.items():
+    print(key, value)
+
+#------------------
+
+count = 0 
+
+while count <5:
+    print("Count is:", count)
+    count += 1
+
+#------------------
+
+correct_password = "secure123"
+attempt = 0
+max_attempts = 3
+
+# while attempt < max_attempts:
+#     user_input = input("Enter password: ")
+#     if user_input == correct_password:
+#         print("Access granted")
+#         break
+#     if attempt == max_attempts - 1:
+#         print("Access denied")
+#         break
+#     else:
+#         print("Incorrect password")
+#         attempt += 1
+
+
+#------------------
+
+number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for num in number_list:
+    if num == 7:
+        print("found 7, stopping the loop")
+        break
+    print(num)
+
+
+for num in number_list:
+    if num % 2 == 0:
+        continue
+    print(num)
+
+#------------------
+
+num = [10,-5,2,-1,8,-3]
+sum =0 
+
+for n in num:
+    if n % 2 ==0:
+        sum += n
+        print("sum so far:", sum)
+    else:
+        continue
