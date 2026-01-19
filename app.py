@@ -1,37 +1,69 @@
-#creating strings 
+my_string = "hello, python coders"
 
-single_q = 'Hello, World!'
-double_q = "Hello, World!"
-quote_in_string = "He said, 'Hello!'"
-multi_line = """This is a
-multi-line string."""
-
-#printing strings
-print(single_q)
-print(double_q)
-print(quote_in_string)
-print(multi_line)
+print(my_string[0:5:3])
+print(my_string[::-1])
 
 
-my_word = "Python"
+#len()
+print(len(my_string))
 
-first_char = my_word[0]
-last_char = my_word[-1]
-print("First character:", first_char)
-print("Last character:", last_char)
+#case conversion
+print(my_string.upper())
+print(my_string.lower())
+print(my_string.capitalize())
+print(my_string.title())
+print(my_string.swapcase())
 
-substring = my_word[1:4]
-print("Substring (1 to 4):", substring)
+#finding substrings
+print(my_string.find("python"))
+print(type(my_string.find("potato")))   
 
-substring_from_start = my_word[:3]
-print("Substring (start to 3):", substring_from_start)
+#replacing substrings
+bad_string = "hello, potato coders"
+good_string = bad_string.replace("potato", "python")
+print(good_string)
 
-substring_to_end = my_word[2:]
-print("Substring (2 to end):", substring_to_end)
+terrible_string = "hello potato potato potato coders"
+better_string = terrible_string.replace("potato", "python", 2)
+print(better_string)
 
-greeting = "Hello"
+#removing whitespace
+whitespace_string = "   hello, python coders    "
+print(whitespace_string.strip())
+print(whitespace_string.lstrip())
+print(whitespace_string.rstrip())
 
-new_greeting = greeting[0] + "ey"
+dotted_string = "...hello, python coders..."
+print(dotted_string.strip("."))
+print(dotted_string.lstrip("."))
+print(dotted_string.rstrip("."))
 
-print("Modified greeting:", new_greeting)
+#checking prefixes and suffixes
+file_name = "document.pdf"
+print(file_name.endswith(".pdf"))
+print(file_name.startswith("doc"))
+print(file_name.startswith("pdf"))
+
+#practice exercise
+
+input_string = input("Enter a string: ")
+input_string = str(input_string)
+
+if not input_string:
+    print('No string entered')
+    exit()
+
+
+#convert to lowercase
+processed_input_string = input_string.strip()
+processed_input_string = processed_input_string.lower()
+
+length = len(processed_input_string)
+
+python_present = processed_input_string.find("python")
+if python_present != -1:
+    print(f'The string contains "python"')
+
+processed_input_string = processed_input_string.replace("python", "PYTHON")
+
 
