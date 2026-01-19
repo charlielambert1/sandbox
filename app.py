@@ -67,3 +67,14 @@ if python_present != -1:
 processed_input_string = processed_input_string.replace("python", "PYTHON")
 
 
+########################
+print('############################')
+
+input_words = input("Enter word: ")
+
+input_words = input_words.lower()
+
+input_word_backwards = input_words[::-1]
+
+if input_words == input_word_backwards:
+    print("The word is a palindrome")
