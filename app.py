@@ -1,80 +1,60 @@
-my_string = "hello, python coders"
+#Lists
 
-print(my_string[0:5:3])
-print(my_string[::-1])
+my_mixed_list = [42, "hello", 3.14, True, "world", 7]
 
+my_list = ["apple", "banana", "cherry", "date"]
 
-#len()
-print(len(my_string))
+empty_list = []
 
-#case conversion
-print(my_string.upper())
-print(my_string.lower())
-print(my_string.capitalize())
-print(my_string.title())
-print(my_string.swapcase())
+numbers = [1, 2, 3, 4, 5]
 
-#finding substrings
-print(my_string.find("python"))
-print(type(my_string.find("potato")))   
+list_from_string = "hello"
 
-#replacing substrings
-bad_string = "hello, potato coders"
-good_string = bad_string.replace("potato", "python")
-print(good_string)
+list_from_string = list(list_from_string) 
 
-terrible_string = "hello potato potato potato coders"
-better_string = terrible_string.replace("potato", "python", 2)
-print(better_string)
+######
 
-#removing whitespace
-whitespace_string = "   hello, python coders    "
-print(whitespace_string.strip())
-print(whitespace_string.lstrip())
-print(whitespace_string.rstrip())
+first_fruit = my_list[0]  # "apple"
+second_fruit = my_list[1]  # "banana"
+last_fruit = my_list[-1]  # "date"
+second_last_fruit = my_list[-2]  # "cherry"
 
-dotted_string = "...hello, python coders..."
-print(dotted_string.strip("."))
-print(dotted_string.lstrip("."))
-print(dotted_string.rstrip("."))
+print(first_fruit, second_fruit, last_fruit, second_last_fruit)
 
-#checking prefixes and suffixes
-file_name = "document.pdf"
-print(file_name.endswith(".pdf"))
-print(file_name.startswith("doc"))
-print(file_name.startswith("pdf"))
+##########################################################
+fruits_slice = my_list[1:4:2]  # ["banana", "cherry", "date"]
+print(fruits_slice)
 
-#practice exercise
+fruits_to_end = my_list[2:]  # ["cherry", "date"]
+print(fruits_to_end)
 
-input_string = input("Enter a string: ")
-input_string = str(input_string)
-
-if not input_string:
-    print('No string entered')
-    exit()
+fruits_from_start = my_list[:3]  # ["apple", "banana", "cherry"]
+print(fruits_from_start)
+##########################################################
+list_length = len(my_list)  # 4
+print(list_length)
 
 
-#convert to lowercase
-processed_input_string = input_string.strip()
-processed_input_string = processed_input_string.lower()
+##########################################################
+my_list.append("elderberry")
+print(my_list)  # ["apple", "banana", "cherry", "date", "elderberry"]
+my_list.insert(1, "blueberry")
+print(my_list)  # ["apple", "blueberry", "banana", "cherry", "date", "elderberry"]
+my_list.remove("cherry")
 
-length = len(processed_input_string)
+##########################################################
+list_1 = [1, 2, 3]
+list_2 = [4, 5, 6]
 
-python_present = processed_input_string.find("python")
-if python_present != -1:
-    print(f'The string contains "python"')
+combined_list = list_1  +  list_2  # [1, 2, 3, 4, 5, 6]
+print(combined_list)
 
-processed_input_string = processed_input_string.replace("python", "PYTHON")
+printed_list = list_1 * 3  # [1, 2, 3, 1, 2, 3, 1, 2, 3]
+#print(printed_list)
 
+is_2_in_list = 2 in list_1  # True
+is_5_not_in_list = 5 not in list_1  # True
+print(is_2_in_list, is_5_not_in_list)
 
-########################
-print('############################')
+###########################################################
 
-input_words = input("Enter word: ")
-
-input_words = input_words.lower()
-
-input_word_backwards = input_words[::-1]
-
-if input_words == input_word_backwards:
-    print("The word is a palindrome")
